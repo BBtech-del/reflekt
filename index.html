@@ -6,69 +6,21 @@
   <title>Reflekt – Motivation Mirror Pack</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0d0d0d;
-      --card: #1a1a1a;
-      --text: #ffffff;
-      --accent1: #ffd700;
-      --accent2: #ff2d9b;
-      --accent3: #00ffff;
-      --steel: #C7CCD1;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; font-family: 'Montserrat', sans-serif;
-      background-color: var(--bg); color: var(--text);
-    }
-    header {
-      position: relative; height: 100vh;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      text-align: center; overflow: hidden;
-    }
-    header video {
-      position: absolute; inset: 0; width: 100%; height: 100%;
-      object-fit: cover; z-index: -1; filter: brightness(0.35) contrast(1.05);
-    }
-    header .overlay {
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.7) 100%);
-      z-index: -1;
-    }
-    header img.logo { max-width: 180px; margin-bottom: 1rem; filter: drop-shadow(0 0 6px rgba(255,255,255,0.12)); }
-    header h1 {
-      font-size: 3rem; font-weight: 800; margin: 0.5rem 0;
-      background: linear-gradient(90deg, var(--accent1), var(--accent2));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    header p {
-      font-size: 1.25rem; max-width: 780px; margin: 0 auto 2rem; color: rgba(255,255,255,0.9);
-    }
-    .cta-btn {
-      background: linear-gradient(90deg, var(--accent2), var(--accent1));
-      color: #000; padding: 1rem 2.6rem; font-size: 1.2rem; font-weight: 800;
-      border: none; border-radius: 48px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 10px 25px rgba(255, 45, 155, 0.25);
-      text-decoration: none; display: inline-block;
-    }
-    .cta-btn:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 30px rgba(255, 214, 0, 0.24); }
-
-    section { padding: 4rem 2rem; text-align: center; }
-    section h2 { font-size: 2.2rem; margin-bottom: 1rem; }
-    .themes {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem; margin-top: 2rem;
-    }
-    .theme-card {
-      background: var(--card); border-radius: 16px; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-    }
-    .theme-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.55); }
-    .theme-card img { width: 100%; height: 160px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem; }
-    .theme-card h3 { margin: 0.25rem 0 0.5rem; font-weight: 800; }
-    .theme-card p { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
-
-    .cta-section { background: linear-gradient(135deg, #101010, #0B0B0B); padding-bottom: 5rem; }
-    footer { background: #000; text-align: center; padding: 2rem; font-size: 0.9rem; color: #aaa; }
+    body { margin:0; font-family:'Montserrat',sans-serif; background:#0d0d0d; color:#fff; }
+    header { position:relative; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; overflow:hidden; }
+    header video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-1; filter:brightness(0.35); }
+    header .overlay { position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:-1; }
+    header img.logo { max-width:180px; margin-bottom:1rem; }
+    header h1 { font-size:3rem; font-weight:800; margin:0.5rem 0; background:linear-gradient(90deg,#ffd700,#ff2d9b); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    header p { font-size:1.25rem; max-width:700px; margin:0 auto 2rem; color:rgba(255,255,255,0.9); }
+    .cta-btn { background:linear-gradient(90deg,#ff2d9b,#ffd700); color:#000; padding:1rem 2.6rem; font-size:1.2rem; font-weight:800; border:none; border-radius:48px; cursor:pointer; text-decoration:none; }
+    section { padding:4rem 2rem; text-align:center; }
+    section h2 { font-size:2.2rem; margin-bottom:1rem; }
+    .themes { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:2rem; margin-top:2rem; }
+    .theme-card { background:#1a1a1a; border-radius:16px; padding:1.5rem; }
+    .theme-card img { width:100%; height:160px; object-fit:cover; border-radius:10px; margin-bottom:1rem; }
+    .theme-card h3 { margin:0; font-weight:800; }
+    footer { background:#000; text-align:center; padding:2rem; font-size:0.9rem; color:#aaa; }
   </style>
 </head>
 <body>
@@ -85,39 +37,18 @@
 
   <section>
     <h2>5 Cinematic Themes</h2>
-    <p>Engineered for quiet luxury and instant focus. Each loop is a seamless 10–12 seconds, optimized for screensavers and live wallpapers.</p>
     <div class="themes">
-      <div class="theme-card">
-        <img src="LUXURY_IMAGE_URL" alt="Luxury Mindset"/>
-        <h3>Luxury Mindset</h3>
-        <p>Molten gold veins under glass-black marble. A soft, gilded aura—wealth without the noise.</p>
-      </div>
-      <div class="theme-card">
-        <img src="PROSPERITY_IMAGE_URL" alt="Prosperity Flow"/>
-        <h3>Prosperity Flow</h3>
-        <p>Emerald and sapphire energies rising in reverse waterfalls. Abundance visualized.</p>
-      </div>
-      <div class="theme-card">
-        <img src="CYBERPUNK_IMAGE_URL" alt="Cyberpunk Drive"/>
-        <h3>Cyberpunk Drive</h3>
-        <p>Neon grit, glitch ripples, and a relentless forward pulse. Future-first focus.</p>
-      </div>
-      <div class="theme-card">
-        <img src="LOVE_IMAGE_URL" alt="Love Manifestation"/>
-        <h3>Love Manifestation</h3>
-        <p>Rose-gold glow, petals in parallax, and a warm heart aura. Attraction energy.</p>
-      </div>
-      <div class="theme-card">
-        <img src="DISCIPLINE_IMAGE_URL" alt="Discipline & Focus"/>
-        <h3>Discipline & Focus</h3>
-        <p>Razor-line simplicity. Zero distraction. Control as an aesthetic.</p>
-      </div>
+      <div class="theme-card"><img src="LUXURY_IMAGE_URL" alt="Luxury Mindset"/><h3>Luxury Mindset</h3></div>
+      <div class="theme-card"><img src="PROSPERITY_IMAGE_URL" alt="Prosperity Flow"/><h3>Prosperity Flow</h3></div>
+      <div class="theme-card"><img src="CYBERPUNK_IMAGE_URL" alt="Cyberpunk Drive"/><h3>Cyberpunk Drive</h3></div>
+      <div class="theme-card"><img src="LOVE_IMAGE_URL" alt="Love Manifestation"/><h3>Love Manifestation</h3></div>
+      <div class="theme-card"><img src="DISCIPLINE_IMAGE_URL" alt="Discipline & Focus"/><h3>Discipline & Focus</h3></div>
     </div>
   </section>
 
-  <section class="cta-section">
-    <h2>Own Your Environment</h2>
-    <p>Reflekt isn’t wallpaper. It’s a mindset device. Download, apply, and feel the shift.</p>
+  <section>
+    <h2>Why Reflekt?</h2>
+    <p>Reflekt isn’t wallpaper. It’s a cinematic digital experience that transforms your environment and your mindset in seconds.</p>
     <a href="YOUR_CHECKOUT_URL" class="cta-btn">Download Now – $19.95</a>
   </section>
 
