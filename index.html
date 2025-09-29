@@ -7,24 +7,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body { margin:0; font-family:'Montserrat',sans-serif; background:#0d0d0d; color:#fff; }
-    .banner { width:100%; max-height:80vh; overflow:hidden; }
-    .banner video { width:100%; height:auto; display:block; }
     header { text-align:center; padding:3rem 1rem; background:#0d0d0d; }
     header img.logo { max-width:180px; margin-bottom:1rem; }
     header h1 { font-size:3rem; font-weight:800; margin:0.5rem 0; background:linear-gradient(90deg,#ffd700,#ff2d9b); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
     header p { font-size:1.25rem; max-width:700px; margin:0 auto 2rem; color:rgba(255,255,255,0.9); }
     .cta-btn { background:linear-gradient(90deg,#ff2d9b,#ffd700); color:#000; padding:1rem 2.6rem; font-size:1.2rem; font-weight:800; border:none; border-radius:48px; cursor:pointer; text-decoration:none; }
+    .banner { width:100%; max-height:80vh; overflow:hidden; margin-bottom:2rem; }
+    .banner video { width:100%; height:auto; display:block; }
     section { padding:4rem 2rem; text-align:center; }
     section h2 { font-size:2.2rem; margin-bottom:1rem; }
     .themes { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:2rem; margin-top:2rem; }
     .theme-card { background:#1a1a1a; border-radius:16px; padding:1.5rem; }
-    .theme-card img { width:100%; height:160px; object-fit:cover; border-radius:10px; margin-bottom:1rem; }
+    .theme-card video, .theme-card img { width:100%; height:160px; object-fit:cover; border-radius:10px; margin-bottom:1rem; }
     .theme-card h3 { margin:0; font-weight:800; }
     footer { background:#000; text-align:center; padding:2rem; font-size:0.9rem; color:#aaa; }
   </style>
 </head>
 <body>
-  <!-- Banner video as a real element -->
+  <header>
+    <!-- Logo -->
+    <img src="YOUR_LOGO_URL" alt="Reflekt Logo" class="logo"/>
+    <!-- Title + tagline -->
+    <h1>Reflekt: Motivation Mirror Pack</h1>
+    <p>Turn any screen into your personal Motivation Mirror. 5 cinematic themes. Instant download. No shipping. Just transformation.</p>
+    <a href="YOUR_CHECKOUT_URL" class="cta-btn">Get Instant Access – $19.95</a>
+  </header>
+
+  <!-- Banner video -->
   <div class="banner">
     <video autoplay muted loop playsinline>
       <source src="https://raw.githubusercontent.com/BBtech-del/reflekt/main/InShot_20250929_045507847.mp4" type="video/mp4">
@@ -32,39 +41,57 @@
     </video>
   </div>
 
-  <header>
-    <img src="YOUR_LOGO_URL" alt="Reflekt Logo" class="logo"/>
-    <h1>Reflekt: Motivation Mirror Pack</h1>
-    <p>Turn any screen into your personal Motivation Mirror. 5 cinematic themes. Instant download. No shipping. Just transformation.</p>
-    <a href="YOUR_CHECKOUT_URL" class="cta-btn">Get Instant Access – $19.95</a>
-  </header>
-
+  <!-- Themes section -->
   <section>
     <h2>5 Cinematic Themes</h2>
     <div class="themes">
+      <!-- Luxury Mindset with video -->
       <div class="theme-card">
-        <img src="https://i.postimg.cc/3xbrxrPx/gemini-2.5-flash-image-preview_(nano-banana)_Composition__Close‑u_(1).png" alt="Luxury Mindset"/>
+        <video 
+          controls 
+          controlsList="nodownload" 
+          oncontextmenu="return false;" 
+          poster="https://placehold.co/400x250?text=Luxury+Mindset+Preview">
+          <source src="https://raw.githubusercontent.com/BBtech-del/reflekt/main/Cinematic_Video_Enhancement_Request.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
         <h3>Luxury Mindset</h3>
       </div>
+
+      <!-- Prosperity Flow -->
       <div class="theme-card">
         <img src="https://i.postimg.cc/RZ0VmJbm/gemini-2.5-flash-image-preview_(nano-banana)_Composition__Emerald.png" alt="Prosperity Flow"/>
         <h3>Prosperity Flow</h3>
       </div>
+
+      <!-- Pets with video -->
+      <div class="theme-card">
+        <video 
+          controls 
+          controlsList="nodownload" 
+          oncontextmenu="return false;" 
+          poster="https://placehold.co/400x250?text=Pets+Preview">
+          <source src="https://raw.githubusercontent.com/BBtech-del/reflekt/main/Kitten_Jumps_Out_Of_Phone.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h3>Pets</h3>
+      </div>
+
+      <!-- Cyberpunk Drive -->
       <div class="theme-card">
         <img src="https://i.postimg.cc/0yN2vKHy/undefined_Composition__Neon‑li.png" alt="Cyberpunk Drive"/>
         <h3>Cyberpunk Drive</h3>
       </div>
+
+      <!-- Love Manifestation -->
       <div class="theme-card">
         <img src="https://i.postimg.cc/52tNJQk1/gemini-2.5-flash-image-preview_(nano-banana)_Composition__Heart‑s.png" alt="Love Manifestation"/>
         <h3>Love Manifestation</h3>
       </div>
-      <div class="theme-card">
-        <img src="https://i.postimg.cc/sg2DzG03/gemini-2.5-flash-image-preview_(nano-banana)_A_soft_charcoal_sky_.png" alt="Discipline & Focus"/>
-        <h3>Discipline & Focus</h3>
-      </div>
     </div>
   </section>
 
+  <!-- Why Reflekt -->
   <section>
     <h2>Why Reflekt?</h2>
     <p>Reflekt isn’t wallpaper. It’s a cinematic digital experience that transforms your environment and your mindset in seconds.</p>
