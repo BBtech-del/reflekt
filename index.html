@@ -7,9 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body { margin:0; font-family:'Montserrat',sans-serif; background:#0d0d0d; color:#fff; }
-    header { position:relative; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; overflow:hidden; }
-    header video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-1; filter:brightness(0.35); }
-    header .overlay { position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:-1; }
+    .banner { width:100%; max-height:80vh; overflow:hidden; }
+    .banner video { width:100%; height:auto; display:block; }
+    header { text-align:center; padding:3rem 1rem; background:#0d0d0d; }
     header img.logo { max-width:180px; margin-bottom:1rem; }
     header h1 { font-size:3rem; font-weight:800; margin:0.5rem 0; background:linear-gradient(90deg,#ffd700,#ff2d9b); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
     header p { font-size:1.25rem; max-width:700px; margin:0 auto 2rem; color:rgba(255,255,255,0.9); }
@@ -20,50 +20,55 @@
     .theme-card { background:#1a1a1a; border-radius:16px; padding:1.5rem; }
     .theme-card img { width:100%; height:160px; object-fit:cover; border-radius:10px; margin-bottom:1rem; }
     .theme-card h3 { margin:0; font-weight:800; }
-    .pricing { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; margin-top:3rem; }
-    .price-card { background:#1a1a1a; border-radius:16px; padding:2rem; }
-    .price-card.highlight { border:2px solid #ffd700; box-shadow:0 0 20px rgba(255,215,0,0.3); }
-    .price-card h3 { font-size:1.6rem; margin-bottom:0.5rem; }
-    .price-card p { color:rgba(255,255,255,0.85); margin-bottom:1.5rem; }
     footer { background:#000; text-align:center; padding:2rem; font-size:0.9rem; color:#aaa; }
   </style>
 </head>
 <body>
-  <header>
+  <!-- Banner video as a real element -->
+  <div class="banner">
     <video autoplay muted loop playsinline>
-      <source src="YOUR_BANNER_VIDEO_URL" type="video/mp4">
+      <source src="https://raw.githubusercontent.com/BBtech-del/reflekt/main/InShot_20250929_045507847.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
-    <div class="overlay"></div>
+  </div>
+
+  <header>
     <img src="YOUR_LOGO_URL" alt="Reflekt Logo" class="logo"/>
     <h1>Reflekt: Motivation Mirror Pack</h1>
-    <p>Turn any screen into your personal Motivation Mirror. Choose your path: grab a single cinematic visual or unlock unlimited access for a full year.</p>
+    <p>Turn any screen into your personal Motivation Mirror. 5 cinematic themes. Instant download. No shipping. Just transformation.</p>
+    <a href="YOUR_CHECKOUT_URL" class="cta-btn">Get Instant Access – $19.95</a>
   </header>
 
   <section>
     <h2>5 Cinematic Themes</h2>
     <div class="themes">
-      <div class="theme-card"><img src="https://i.postimg.cc/3xbrxrPx/gemini-2.5-flash-image-preview_(nano-banana)_Composition__Close‑u_(1).png" alt="Luxury Mindset"/><h3>Luxury Mindset</h3></div>
-      <div class="theme-card"><img src="https://i.postimg.cc/RZ0VmJbm/gemini-2.5-flash-image-preview_(nano-banana)_Composition__Emerald.png" alt="Prosperity Flow"/><h3>Prosperity Flow</h3></div>
-      <div class="theme-card"><img src="https://i.postimg.cc/0yN2vKHy/undefined_Composition__Neon‑li.png" alt="Cyberpunk Drive"/><h3>Cyberpunk Drive</h3></div>
-      <div class="theme-card"><img src="https://i.postimg.cc/52tNJQk1/gemini-2.5-flash-image-preview_(nano-banana)_Composition__Heart‑s.png" alt="Love Manifestation"/><h3>Love Manifestation</h3></div>
-      <div class="theme-card"><img src="https://i.postimg.cc/sg2DzG03/gemini-2.5-flash-image-preview_(nano-banana)_A_soft_charcoal_sky_.png" alt="Discipline & Focus"/><h3>Discipline & Focus</h3></div>
+      <div class="theme-card">
+        <img src="https://i.postimg.cc/3xbrxrPx/gemini-2.5-flash-image-preview_(nano-banana)_Composition__Close‑u_(1).png" alt="Luxury Mindset"/>
+        <h3>Luxury Mindset</h3>
+      </div>
+      <div class="theme-card">
+        <img src="https://i.postimg.cc/RZ0VmJbm/gemini-2.5-flash-image-preview_(nano-banana)_Composition__Emerald.png" alt="Prosperity Flow"/>
+        <h3>Prosperity Flow</h3>
+      </div>
+      <div class="theme-card">
+        <img src="https://i.postimg.cc/0yN2vKHy/undefined_Composition__Neon‑li.png" alt="Cyberpunk Drive"/>
+        <h3>Cyberpunk Drive</h3>
+      </div>
+      <div class="theme-card">
+        <img src="https://i.postimg.cc/52tNJQk1/gemini-2.5-flash-image-preview_(nano-banana)_Composition__Heart‑s.png" alt="Love Manifestation"/>
+        <h3>Love Manifestation</h3>
+      </div>
+      <div class="theme-card">
+        <img src="https://i.postimg.cc/sg2DzG03/gemini-2.5-flash-image-preview_(nano-banana)_A_soft_charcoal_sky_.png" alt="Discipline & Focus"/>
+        <h3>Discipline & Focus</h3>
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>Choose Your Experience</h2>
-    <div class="pricing">
-      <div class="price-card">
-        <h3>Individual Visual</h3>
-        <p>$5.99 each<br>Pick your favorite cinematic Motivation Mirror and own it forever.</p>
-        <a href="YOUR_CHECKOUT_URL_SINGLE" class="cta-btn">Get This Visual – $5.99</a>
-      </div>
-      <div class="price-card highlight">
-        <h3>Unlimited Annual Pass</h3>
-        <p>$50 / year<br>Unlimited downloads of every current and future Motivation Mirror. New visuals added regularly. Best value.</p>
-        <a href="YOUR_CHECKOUT_URL_ANNUAL" class="cta-btn">Unlock Unlimited – $50 / Year</a>
-      </div>
-    </div>
+    <h2>Why Reflekt?</h2>
+    <p>Reflekt isn’t wallpaper. It’s a cinematic digital experience that transforms your environment and your mindset in seconds.</p>
+    <a href="YOUR_CHECKOUT_URL" class="cta-btn">Download Now – $19.95</a>
   </section>
 
   <footer>
